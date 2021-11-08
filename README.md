@@ -15,7 +15,7 @@ Additional resources include:
 
 ## Proposed composition of the groups: 
 - Group #1	Theo Picard	Robin Quéré	Daria Botvynko	Guillaume Morel
-- Group #2	Edouard Gauvrit	Quentin Febvre	Amédée Roy	Perrone Beauchot
+- Group #2	Edouard Gauvrit	Quentin Febvre	Amédée Roy	Perrine Beauchot(TBC)
 - Group #3	Matteo Zambra	Eugenion Cutolo	Mario Herrero	Aurélien Colin
 - Group #4	Anastasia Gorbunova	Simon Driscoll	Oscar Jacquot	Charlotte Durand
 - Group #5	Camille Mazoyer	Marine Laval	Cristele Chevalier	Clément Brochet
