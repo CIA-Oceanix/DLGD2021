@@ -11,5 +11,5 @@ It comprises a subdirectory for each project theme, namely:
 
 Additional resources include:
 - General project-related resources and guidelines
-- The introductory slides of the course: 
+- The introductory slides of the course: https://github.com/CIA-Oceanix/DLGD2021/blob/main/intro_DLGD2021.pdf
 
