@@ -21,6 +21,7 @@ Additional resources include:
 - Group #5	Camille Mazoyer	Marine Laval	Cristele Chevalier	Clément Brochet
 - Group #6	Maialen Irazoqui	Mathieu Hamon	Alexandre Mignot	Charles-Emmanuel Testut
 - Group #7	TREBOUTTE Anaelle	Daoud JAHDOU	Kinan ABBAS	Isabelle Gouttevin
-- Group #8	Simon VAN GENNIP	Vaishnavi Borse	Robin Noyelle	Witold Podlejski
+- Group #8	Simon VAN GENNIP	Vaishnavi Borse	Robin Noyelle	Witold Podlejski 
 - Group #9	Joseph Jenkins	Matthieu Gallet	Mohammad abed Al Rahman hammoud	Laurane Charrier
 - Group #10	Robin Marcille	J Emmanuel Johnson	Anuar Togaibekov	Simon Driscoll
+- Group #11 Anthony Frion	Paul Aimée	Benjamin	Anne
