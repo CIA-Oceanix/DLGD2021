@@ -1,6 +1,6 @@
 # Resources for lecture #5: deep learning and Inverse problems
 
-## Slides of the lecture (pdf): 
+## Slides of the lecture (pdf): lecture_DLGD2021_DLPbInv.pdf
 
 ## Code resources to be used during the lecture:
 - Notebook for Model-based DA implemented in Pytorch: notebookPyTorch_InvProb_ModelBased_L63_Students.ipynb
