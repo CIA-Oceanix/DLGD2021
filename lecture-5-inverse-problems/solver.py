@@ -14,13 +14,13 @@ import torch.nn.functional as F
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 class ConvLSTM2d(torch.nn.Module):
-    def __init__(self, input_size, hidden_size, kernel_size = 3):
+    def __init__(self, input_size, hidden_size, kernel_size = 3,padding_mode='zeros'):
         super(ConvLSTM2d, self).__init__()
         self.input_size = input_size
         self.hidden_size = hidden_size
         self.kernel_size = kernel_size
         self.padding = int((kernel_size - 1) / 2)
-        self.Gates = torch.nn.Conv2d(input_size + hidden_size, 4 * hidden_size, kernel_size = self.kernel_size, stride = 1, padding = self.padding)
+        self.Gates = torch.nn.Conv2d(input_size + hidden_size, 4 * hidden_size, kernel_size = self.kernel_size, stride = 1, padding = self.padding,padding_mode=padding_mode)
 
     def forward(self, input_, prev_state):
 
@@ -61,13 +61,13 @@ class ConvLSTM2d(torch.nn.Module):
         return hidden, cell
 
 class ConvLSTM1d(torch.nn.Module):
-    def __init__(self, input_size, hidden_size, kernel_size = 3):
+    def __init__(self, input_size, hidden_size, kernel_size = 3,padding_mode='zeros'):
         super(ConvLSTM1d, self).__init__()
         self.input_size = input_size
         self.hidden_size = hidden_size
         self.kernel_size = kernel_size
         self.padding = int((kernel_size - 1) / 2)
-        self.Gates = torch.nn.Conv1d(input_size + hidden_size, 4 * hidden_size, kernel_size = self.kernel_size, stride = 1, padding = self.padding)
+        self.Gates = torch.nn.Conv1d(input_size + hidden_size, 4 * hidden_size, kernel_size = self.kernel_size, stride = 1, padding = self.padding,padding_mode=padding_mode)
 
     def forward(self, input_, prev_state):
 
@@ -190,7 +190,7 @@ def compute_WeightedL2Norm1D(x2,w):
 
 # Gradient-based minimization using a LSTM using a (sub)gradient as inputs
 class model_GradUpdateLSTM(torch.nn.Module):
-    def __init__(self,ShapeData,periodicBnd=False,DimLSTM=0,rateDropout=0.):
+    def __init__(self,ShapeData,periodicBnd=False,DimLSTM=0,rateDropout=0.,padding_mode='zeros'):
         super(model_GradUpdateLSTM, self).__init__()
 
         with torch.no_grad():
@@ -211,9 +211,9 @@ class model_GradUpdateLSTM(torch.nn.Module):
         self.dropout = torch.nn.Dropout(rateDropout)
 
         if len(self.shape) == 2: ## 1D Data
-            self.lstm = ConvLSTM1d(self.shape[0],self.DimState,3)
+            self.lstm = ConvLSTM1d(self.shape[0],self.DimState,3,padding_mode=padding_mode)
         elif len(self.shape) == 3: ## 2D Data
-            self.lstm = ConvLSTM2d(self.shape[0],self.DimState,3)
+            self.lstm = ConvLSTM2d(self.shape[0],self.DimState,3,padding_mode=padding_mode)
 
     def _make_ConvGrad(self):
         layers = []
