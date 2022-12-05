@@ -338,7 +338,9 @@ class Solver_Grad_4DVarNN(nn.Module):
             normgrad = normgrad)
 
     def solve(self, x_0, obs, mask, hidden = None , cell = None, normgrad = 0.):
+        
         x_k = torch.mul(x_0,1.) 
+        x_k = torch.autograd.Variable(x_k, requires_grad=True)
         hidden_ = hidden
         cell_ = cell 
         normgrad_ = normgrad
